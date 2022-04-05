@@ -112,7 +112,7 @@ Please see 'examples.lua' for commented and working examples.
     --import the module
     local Streams = require("Streams')
     --create a stream, filter it, then collect the reuslts.
-    --first createa a stream from the given table.
+    --first create a stream from the given table.
     --we then filter out non even indexes.
     --then we collect the results into a table.
     local results = Streams({1,2,3,4,5,6,7,8}):filter(function(_,i) return i % 2 == 0 end):collect()    
