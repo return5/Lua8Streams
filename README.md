@@ -20,14 +20,16 @@ Please see 'examples.lua' for commented and working examples.
     - intermediate operator which filters input items.  
     - takes in a function which accepts inputs and returns a boolean value.  
 
-##### Finalizer methods  
 - ```Streams:skip(n)```
-    - intermediate function which returns a stream skipping over the first n items.
+   - intermediate function which returns a stream skipping over the first n items.
+   - if used, it should be the first intermediate method called.
 
 
 - ```Streams:limit(n)```
-    - intermediate operation which returns a stream limited to the first n items.
+   - intermediate operation which returns a stream limited to the first n items.
+   - if used, it should be the first intermediate method called.
 
+##### Finalizer methods
 
  - ```Streams:collect()```  
     - finalizer method which returns a table with each item as an index of that table.  
